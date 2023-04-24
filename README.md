@@ -35,36 +35,52 @@
 - Vercel
 
 # 分担
-一方がNotion提携
+
+一方が Notion 提携
 もう一方がフラッシュカード
 
 # データモデル
+
 入力
-```
+
+```json
 {
-  {
-    "id": "0"
-    "word": "itchy",
-  },
-  {
-    "id": "1"
-    "word": "in order"
-  },
+  [
+    {
+      "Checkbox": {
+        "id": "hogeid",
+        "checkbox": false,
+      },
+    },
+    {
+      "Checkbox": {
+        "id": "fugaid",
+        "checkbox": false,
+      },
+    }
   ...
+  ]
 }
 ```
+
 出力
-```
+
+```json
 {
-  {
-    "id": "0",
-    "word": "itchy",
-    "check": false,
-  },
-  {
-    "id": "1",
-    "word": "in order",
-    "check": true
-  },
+  [
+    {
+      "Checkbox": {
+        "id": "hogeid",
+        "checkbox": true,
+      },
+    },
+    {
+      "Checkbox": {
+        "id": "fugaid",
+        "checkbox": false,
+      },
+    }
+  ...
+  ]
 }
 ```
